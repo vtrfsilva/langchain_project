@@ -1,0 +1,6 @@
+Gabriela gosta de ler.
+Gabriela pesa 58 kg.
+{"funcionario":"Victor","empresa":"Serasa Experian","jobPosition":"Backend Developer"}
+{"funcionario":"Gabriela","empresa":"Colégio Lions SP-ZL","jobPosition":"Professora de Geografia"}
+Gabriela tem 1,60m de altura.
+Victor tem 1,95m de altura.
