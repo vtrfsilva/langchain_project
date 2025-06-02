@@ -1,13 +1,10 @@
 import requests
 from langchain.llms.base import LLM
+from typing import List
 
 class CustomLLM(LLM):
     api_url: str
-    message_history: list = []
-
-    def __init__(self, api_url: str):
-        self.api_url = api_url
-        self.message_history = []
+    message_history: List[dict] = []
 
     def _call(self, prompt: str, stop=None) -> str:
         self.message_history.append({"role": "user", "content": prompt})

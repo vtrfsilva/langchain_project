@@ -6,7 +6,7 @@ class LLMStudioEmbeddings(Embeddings):
         self.api_url = api_url
 
     def embed_query(self, text: str):
-        response = requests.post(f"{self.api_url}/v1/embeddings", json={"input": text})
+        response =  requests.post(f"{self.api_url}/v1/embeddings", json={"input": text})
         response_data = response.json()
         return response_data['data'][0]['embedding']
 
