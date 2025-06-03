@@ -4,14 +4,13 @@ from typing import List
 
 class CustomLLM(LLM):
     api_url: str
-    message_history: List[dict]
 
     def __init__(self, api_url: str):
         self.api_url = api_url
         # Each instance should maintain its own history of messages. Using a
         # list defined at the class level would result in all instances
         # sharing the same history, so we initialise it here instead.
-        self.message_history = []
+        self.message_history: List[dict] = []
 
     def _call(self, prompt: str, stop=None) -> str:
         self.message_history.append({"role": "user", "content": prompt})
